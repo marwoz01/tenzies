@@ -4,11 +4,11 @@ Tenzies is a simple and addictive dice game built with React. The goal is to rol
 
 ## Live Demo
 
-👉 [Play Tenzies Online](https://your-deployment-link.com)
+[Play Tenzies Online](https://tenzies-iota-plum.vercel.app/)
 
-## 📸 Screenshot
+## Screenshot
 
-![Tenzies Game Screenshot](./assets/screenshot.png)
+![Tenzies Game Screenshot](src/assets/screenshot.png)
 
 
 ## Features
