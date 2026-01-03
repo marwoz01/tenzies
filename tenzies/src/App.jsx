@@ -11,7 +11,6 @@ export default function App() {
     dice.every((die) => die.value === dice[0].value);
 
   function generateAllNewDice() {
-    console.log("generateAllNewDice was called!");
     return new Array(10).fill(0).map(() => ({
       value: Math.ceil(Math.random() * 6),
       isHeld: false,
@@ -20,11 +19,15 @@ export default function App() {
   }
 
   function rollDice() {
-    setDice((oldDice) =>
-      oldDice.map((die) =>
-        die.isHeld ? die : { ...die, value: Math.ceil(Math.random() * 6) }
-      )
-    );
+    if (!gameWon) {
+      setDice((oldDice) =>
+        oldDice.map((die) =>
+          die.isHeld ? die : { ...die, value: Math.ceil(Math.random() * 6) }
+        )
+      );
+    } else {
+      setDice(generateAllNewDice());
+    }
   }
 
   function hold(id) {
